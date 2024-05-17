@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+  int numeroBuscado, arreglo[88];
+
+  for(int i = 0; i < 88; i++) {
+    arreglo[i] = i + 1;
+  }
+
+  printf("Ingrese el numero que desea buscar: ");
+  scanf("%d", &numeroBuscado);
+
+  int encontrado = 0;
+
+  for(int j = 0; j < 88; j++) {
+    if(arreglo[j] == numeroBuscado) {
+      printf("Valor encontrado\n");
+      encontrado = 1; 
+      break;
+    }
+  }
+
+  if(!encontrado) {
+    printf("El valor no está en el arreglo\n");
+  }
+
+  return 0;
+}
